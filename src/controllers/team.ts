@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import teamService from '../service/team'
+import { teamService } from '../services'
 
 class TeamController {
   async create(req: Request, res: Response) {
@@ -48,6 +48,4 @@ class TeamController {
   }
 }
 
-const teamController = new TeamController()
-
-export default teamController
+export default new TeamController()

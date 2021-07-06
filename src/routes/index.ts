@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import * as dotenv from 'dotenv'
-import teamController from '../controller/team'
+import { teamController } from '../controllers'
 
 dotenv.config()
 

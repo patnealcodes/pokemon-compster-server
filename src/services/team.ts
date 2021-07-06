@@ -1,4 +1,4 @@
-import teamDAO from '../dao/team'
+import { teamDAO } from '../daos'
 import { TeamCreateData } from '../types'
 
 class TeamService {
@@ -24,6 +24,4 @@ class TeamService {
   }
 }
 
-const teamService = new TeamService()
-
-export default teamService
+export default new TeamService()

@@ -1,6 +1,5 @@
 import db from "../db"
 
-
 class TeamDAO {
   async createTeam(team_name: string, team_list: number[]) {
     return await db('teams')
@@ -35,6 +34,4 @@ class TeamDAO {
   }
 }
 
-const teamDAO = new TeamDAO()
-
-export default teamDAO
+export default new TeamDAO
