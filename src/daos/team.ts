@@ -1,11 +1,11 @@
 import db from "../db"
 
 class TeamDAO {
-  async createTeam(team_name: string, team_list: number[]) {
+  async createTeam(teamName: string, teamList: number[]) {
     return await db('teams')
       .insert({
-        team_name: team_name,
-        team_list: team_list
+        team_name: teamName,
+        team_list: teamList
       })
       .returning('id')
   }
@@ -34,4 +34,4 @@ class TeamDAO {
   }
 }
 
-export default new TeamDAO
+export default new TeamDAO()

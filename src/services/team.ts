@@ -3,8 +3,8 @@ import { TeamCreateData } from '../types'
 
 class TeamService {
   create(teamDTO: TeamCreateData) {
-    const { team_name, team_list } = teamDTO
-    return teamDAO.createTeam(team_name, team_list)
+    const { teamName, teamList } = teamDTO
+    return teamDAO.createTeam(teamName, teamList)
   }
 
   get(id: string) {

@@ -1,6 +1,6 @@
 interface TeamCreateData {
-  team_name: string,
-  team_list: number[]
+  teamName: string,
+  teamList: number[]
 }
 
 export {
