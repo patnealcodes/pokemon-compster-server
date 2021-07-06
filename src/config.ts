@@ -28,7 +28,7 @@ export namespace Knex {
       max: 10
     },
     migrations: {
-      directory: './src/db/migrations',
+      directory: '../db/migrations',
       tableName: 'knex_migrations'
     }
   }

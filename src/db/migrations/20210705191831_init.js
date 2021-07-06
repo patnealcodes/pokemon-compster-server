@@ -1,9 +1,9 @@
 
 exports.up = function(knex) {
   return knex.schema.createTable('teams', table => {
-    table.increments('id')
+    table.uuid('id').primary().defaultTo(knex.raw('gen_random_uuid()'))
     table.string('team_name').notNullable().unique()
-    table.specificType('team_members', 'INT[]')
+    table.specificType('team_list', 'INT[]')
     table.timestamps(true,true)
   })
 };
