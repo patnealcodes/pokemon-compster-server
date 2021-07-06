@@ -11,7 +11,7 @@ const {
 } = process.env
 
 export namespace Server {
-  export const port = Number(PORT || '8080')
+  export const port = Number(PORT || '5000')
   export const isDev = NODE_ENV === 'development'
 }
 
