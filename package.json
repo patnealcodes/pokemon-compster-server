@@ -9,7 +9,7 @@
     "dev:debug": "nodemon --config nodemon.json --inspect-brk src/index.ts",
     "migrate": "knex migrate:latest",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
-    "prestart": "yarn build",
+    "postinstall": "yarn build",
     "start": "node .",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
