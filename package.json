@@ -1,6 +1,6 @@
 {
   "name": "pokemon-compster-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The server supporting the Pokemon Compster web app",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "dev:debug": "nodemon --config nodemon.json --inspect-brk src/index.ts",
     "migrate": "knex migrate:latest",
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "prestart": "npm run build",
+    "prestart": "yarn build",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +23,9 @@
     "url": "https://github.com/patnealcodes/pokemon-compster/issues"
   },
   "homepage": "https://pokemon.compster.io",
+  "engines": {
+    "yarn": "1.22.4"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "knex": "^0.95.6",
