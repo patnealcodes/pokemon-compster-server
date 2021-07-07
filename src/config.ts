@@ -4,9 +4,7 @@ dotenv.config()
 
 const {
   NODE_ENV,
-  DB_NAME,
-  DB_HOST,
-  DB_PW,
+  DATABASE_URL,
   PORT
 } = process.env
 
@@ -18,11 +16,7 @@ export namespace Server {
 export namespace Knex {
   export const config = {
     client: 'postgresql',
-    connection: {
-      database: DB_NAME,
-      user: DB_HOST,
-      password: DB_PW
-    },
+    connection: process.env.DATABASE_URL,
     pool: {
       min: 2,
       max: 10
