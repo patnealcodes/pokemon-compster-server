@@ -1,6 +1,6 @@
 {
   "name": "pokemon-compster-server",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The server supporting the Pokemon Compster web app",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "dev": "nodemon --config nodemon.json src/index.ts",
     "dev:debug": "nodemon --config nodemon.json --inspect-brk src/index.ts",
     "migrate": "knex migrate:latest",
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "prestart": "yarn build",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
